@@ -21,3 +21,27 @@ Sample Output:
 1
 5
 '''
+def collatz_sequence(n):
+    count = 0
+    sequence = []
+    
+    while n != 1:
+        sequence.append(n)
+        if n % 2 == 0:
+            n = n // 2  # n is even
+        else:
+            n = 3 * n + 1  # n is odd
+        count += 1
+
+    sequence.append(1)  # Append the last number 1
+    # Print the sequence
+    for num in sequence:
+        print(num)
+    
+    # Print the count of steps
+    print(count)
+
+# Input
+n = int(input("Enter a number: "))
+collatz_sequence(n)
+
