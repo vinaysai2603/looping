@@ -10,3 +10,21 @@ Sample Input:
 Sample Output:
 Yes
 ''' 
+def is_factorial(n):
+    if n < 0:
+        return "No"
+    
+    factorial = 1
+    i = 1
+    
+    while factorial < n:
+        i += 1
+        factorial *= i
+        
+    return "Yes" if factorial == n else "No"
+
+# Input
+n = int(input("Enter a number: "))
+result = is_factorial(n)
+print(result)
+
